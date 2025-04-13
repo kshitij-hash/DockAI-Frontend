@@ -154,7 +154,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({
 
       // Send to combined endpoint
       const response = await fetch(
-        "http://127.0.0.1:8000/process-docking-data",
+        `${process.env.API_URL}/process-docking-data`,
         {
           method: "POST",
           body: formData,
